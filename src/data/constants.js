@@ -3,6 +3,7 @@ export const Bio = {
     roles: [
       "Full Stack Developer",         
       "Programmer",
+      
     ],
     description:
      "I am a driven and adaptable individual, fueled by an insatiable curiosity and a commitment to excellence. With a deep passion for continuous learning, I strive to exceed expectations and deliver impactful results. Armed with a positive attitude and a resilient growth mindset, I am ready to tackle any challenge, make meaningful contributions, and achieve extraordinary success.",
