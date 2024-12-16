@@ -159,12 +159,12 @@ export const Bio = {
   export const projects = [
     {
       id: 0,
-      title: "Book Store(Mern-stack)",
+      title: "Book Store",
       date: "Sep 2024 - Oct 2024",
       description:
         "A responsive and interactive frontend using React.js that allows users to easily browse and manage books. Add/Edit/Delete Books.The app is fully responsive, providing an optimized experience across all devices, including mobile and desktop.",
       image:
-        "https://drive.google.com/file/d/1JYYSCHOhZI1DsHfDYfNvv-Fs0MmEACxX/view?usp=drive_link",
+        "https://i.ytimg.com/vi/3Q-sJ2bqHXk/maxresdefault.jpg",
       tags: [       
         "React Js",
         "MongoDb",
@@ -176,65 +176,112 @@ export const Bio = {
       github: "https://github.com/dammamonnankulama/Book-store-MERN",
       
     },
-
     {
       id: 1,
+      title: "Crystal Beauty Care",
+      date: "nov 2024 - Present",
+      description:
+        "A fully functional MERN stack e-commerce web application, Crystal Beauty Care, designed to sell a wide range of beauty products. The platform includes advanced features such as product browsing, user authentication, a shopping cart, secure checkout, and real-time order tracking..",
+      image:
+        "https://cdn.dribbble.com/users/1981841/screenshots/6702986/shot-3_4x.jpg?resize=400x0",
+      tags: [
+        "React Js",
+        "MongoDb",
+        "Node Js",
+        "Express Js",
+       
+      ],
+      category: "web app",
+      github: "https://github.com/dammamonnankulama/cbc-backend",
+      
+    },
+
+    {
+      id: 2,
       title: "SKIN CONSULTATION MANAGEMENT",
       date: "Jan 2024 - Mar 2024",
       description:
         "Developed a skin consultation management system to address inefficiencies in the manual record-keeping of doctors, patients and consultations.",
       image:
-        "https://drive.google.com/file/d/1qID_8ABv0vzmDu01AomHGY4OkAM4AKR6/view?usp=drive_link",
+        "https://www.airslate.com/preview/workflow/document/315/384/1/1/medium.jpeg",
       tags: [
         "JAVA",
         "java Swing",
         "GIT",
        
       ],
-      category: "Desktop app",
+      category: "desktop app",
       github: "https://github.com/dammamonnankulama/Skin-Consultation-Demo",
       
     },
     
     {
-      id: 2,
+      id: 3,
       title: "SIGN LANGUAGE RECOGNITION SYSTEM",
       date: "Jan 2023 - May 2023",
       description:
         "The project aimed to address communication barriers between sign language users and non-sign language speakers, fostering inclusivity.",
       image:
-        "https://drive.google.com/file/d/1zwJdxMXQWEPxGWvJyuTB-znZMqsS-nnq/view?usp=drive_link",
+        "https://i0.wp.com/thecleverprogrammer.com/wp-content/uploads/2020/12/sign-1.png?resize=712%2C377&ssl=1",
       tags: ["Python", "Fast API", "JavaScript"],
-      category: "android app",
+      category: "web app",
       github: "https://github.com/dammamonnankulama/SignLangRecognition",
       
     },
     {
-      id: 3,
+      id: 4,
       title: "DICE ROLLING GAME",
       date: "May 2023 - Aug 2023",
       description:
         "Created a dice rolling game played between a human player and a computer opponent.",
       image:
-        "https://drive.google.com/file/d/16dudxi2BcRChDg6QwcwFwRn4D468hTj0/view?usp=drive_link",
+        "https://kodaschool.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fbu96b58t%2Fproduction%2Fcda7bdccdc6f94ffa5037f7031423394d010c317-1366x768.png%3Fw%3D1366%26auto%3Dformat&w=3840&q=75",
       tags: ["Kotlin"],
       category: "android app",
       github: "https://github.com/dammamonnankulama/Dice-Rolling-Game-Demo",
       
     },
     {
-      id: 4,
+      id: 5,
       title: "Foodie - Restaurant Landing Page",
       date: "May 2024 - Jun 2024",
       description:
         "This elegant landing page for Foodie showcases a user-friendly interface with seamless navigation. It highlights the restaurant's commitment to balanced eating and exquisite flavors through a visually appealing design.",
       image:
-        "https://drive.google.com/file/d/1Ph2-RXjMCuEvnSNnBidH2T8vYvC2EsFw/view?usp=drive_link",
+        "https://cdn.tuk.dev/assets/templates/upcoming/foodies.png",
       tags: ["React","Material UI","JavaScript","HTML","CSS"],
       category: "web app",
       github: "https://github.com/dammamonnankulama/Foodie-Landing-Page",
       
     },
+    {
+      id: 6,
+      title: "Iceman_Racing WebPage",
+      date: "Jun 2022 - Aug 2022",
+      description:
+        "The challenge was to create an engaging online presence for a fictional Formula One Racing Team, Iceman Racing, to enhance brand visibility and fan engagement.",
+      image:
+        "https://s.tmimgcdn.com/scr/400x250/207700/formulae-carting-and-racing-html5-website-template_207754-original.jpg",
+      tags: ["HTML","CSS","JavaScript"],
+      category: "web app",
+      github: "https://github.com/dammamonnankulama/Iceman_Racing_webpage",
+      
+    },
+    {
+      id: 7,
+      title: "Food-Recipes-Menu",
+      date: "Mar 2024 - May 2024",
+      description:
+        "A Kotlin-based Food Recipe Menu Card project showcasing a clean, user-friendly interface for exploring and managing delicious recipes.",
+      image:
+        "https://i.ytimg.com/vi/9vpGW0tQP3s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD-PAiPd8w-8WKKKQq-zcIAPNyvpA",
+      tags: ["Kotlin"],
+      category: "android app",
+      github: "https://github.com/dammamonnankulama/Food-Recipes-Menu-Card",
+      
+    },
+    
+
   
   ];
   
