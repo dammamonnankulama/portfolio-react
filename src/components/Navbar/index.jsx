@@ -2,7 +2,6 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { Bio } from '../../data/constants';
 
 
@@ -43,18 +42,7 @@ const MobileIcons = styled.div`
         color: ${({ theme }) => theme.text_primary};
     }
 `;
-const NavLogo = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.text_primary};
-  text-decoration: none;
-`;
 
-const LogoImage = styled.img`
-  width: 40px;  // Adjust the size as needed
-  height: auto;
-  margin-right: 10px;
-`;
 const NavItems = styled.ul`
    width: 100%;
    display: flex;
@@ -138,6 +126,31 @@ const LinkedInButton = styled.a`
     font-size: 14px;
   }
 `;
+const LogoText = styled.span`
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary}; 
+  display: inline-block;
+  margin-left: 10px;
+
+  
+  &::before {
+    content: "<";
+    margin-right: 4px;
+    color: ${({ theme }) => theme.secondary}; 
+  }
+
+  
+  &::after {
+    content: ">";
+    margin: 0 4px;
+    color: ${({ theme }) => theme.secondary}; 
+  }
+
+  span {
+    color: ${({ theme }) => theme.primary}; 
+  }
+`;
 
 const MobileMenu = styled.div`
     display: flex;
@@ -180,18 +193,14 @@ const MobileMenuLink = styled(LinkR)`
 
 
 
+
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
     const theme = useTheme();
     return (
         <Nav>
             <NavContainer>
-                <NavLogo to="/">
-                    
-                    <LogoImage src="https://cdn.iconscout.com/icon/premium/png-512-thumb/hacker-19-485442.png?f=webp&w=256" alt="Logo" />
-                    <span>Portfolio</span>
-                </NavLogo>
-
+                <LogoText>Damma <span>Deshan</span></LogoText>
                 <MobileIcons>
                     <FaBars onClick={() => {
                         setOpen(!open)
