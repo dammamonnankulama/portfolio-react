@@ -3,6 +3,7 @@ import styled, { useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
+import { Bio } from '../../data/constants';
 
 
 const Nav = styled.div`
@@ -89,7 +90,7 @@ const ButtonContainer = styled.div`
         display: none;
     }
 `;
-const GithubButton = styled.button`
+const GithubButton = styled.a`
     border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
@@ -112,6 +113,30 @@ const GithubButton = styled.button`
     }
      
     
+`;
+const LinkedInButton = styled.a`
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  border-radius: 20px;
+  color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  padding: 0 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.6s ease-in-out;
+  
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};     
+  }
+
+  @media screen and (max-width: 768px) { 
+    font-size: 14px;
+  }
 `;
 const Span = styled.div`
     padding: 0 4px;
@@ -165,11 +190,22 @@ const Navbar = () => {
     return (
         <Nav>
             <NavContainer>
-                <NavLogo to=''>
-                    <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
+                <NavLogo to="">
+                    <button
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            color: "white",
+                            background: "none",
+                            border: "none",
+                            marginBottom: '20',
+                            cursor: 'pointer',
+                        }}
+                    >
                         <DiCssdeck size="3rem" /> <Span>Po</Span>
-                    </a>
+                    </button>
                 </NavLogo>
+
                 <MobileIcons>
                     <FaBars onClick={() => {
                         setOpen(!open)
@@ -183,7 +219,12 @@ const Navbar = () => {
                     <NavLink href='#education'>Education</NavLink>
                 </NavItems>
                 <ButtonContainer>
-                    <GithubButton>GitHub Profile</GithubButton>
+                    <GithubButton href={Bio.github} target="_blank" rel="noopener noreferrer">
+                        Github Profile
+                    </GithubButton>
+                    <LinkedInButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer">
+                        LinkedIn Profile
+                    </LinkedInButton>
                 </ButtonContainer>
 
             </NavContainer>

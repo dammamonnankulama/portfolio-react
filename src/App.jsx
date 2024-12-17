@@ -6,7 +6,9 @@ import Hero from './components/HeroSection';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import ProjectDetails from './components/ProjectDetails';
 import { BrowserRouter as Router } from 'react-router-dom';
+import React, { useState } from 'react';
 
 
 const Body = styled.div`
@@ -32,6 +34,8 @@ rgba(201, 32, 184, 0) 50%
 `;
 
 function App() {
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
+  
   return (
     <ThemeProvider theme={darkTheme}>
       <Router>
@@ -40,15 +44,14 @@ function App() {
           <Hero />
           <Wrapper>
             <Skills />
-            <Projects />
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            {openModal.state && (
+              <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+            )}
           </Wrapper>
           <Education />
-
-
         </Body>
-
       </Router>
-
     </ThemeProvider>
   );
 }

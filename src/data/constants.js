@@ -10,7 +10,7 @@ export const Bio = {
     github: "https://github.com/dammamonnankulama",
     resume:
       "https://drive.google.com/file/d/1KqO0Y7wgi5JKAwLr7omDpD0ZJmVapSbE/view?usp=drive_link",
-    linkedin: "https://www.linkedin.com/in/damma-monnankulama-266011309/?original_referer=https%3A%2F%2Fwww.google.com%2F"
+    linkedin: "https://www.linkedin.com/in/damma-monnankulama-266011309/"
 
   };
   
