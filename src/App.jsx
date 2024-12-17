@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetails';
 import { BrowserRouter as Router } from 'react-router-dom';
 import React, { useState } from 'react';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 
@@ -36,7 +38,7 @@ rgba(201, 32, 184, 0) 50%
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   return (
@@ -54,6 +56,11 @@ function App() {
             )}
           </Wrapper>
           <Education />
+          <Wrapper>
+          <Contact />
+          </Wrapper>
+          <Footer />
+          
         </Body>
       </Router>
     </ThemeProvider>
