@@ -6,7 +6,6 @@ import HeroImg from '../../images/PortFolio_IMG3.jpg';
 import HeroBgAnimation from "../HeroBgAnimation";
 
 
-
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
   display: flex;
