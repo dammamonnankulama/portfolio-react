@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { Bio } from '../../data/constants';
 
 
@@ -29,19 +29,7 @@ const NavContainer = styled.div`
     padding: 0 24px;
     max-width: 1200px;
 `;
-const NavLogo = styled(LinkR)`
-    
-    width: 80px;
-    padding: 0 6px;
-    text-decoration: none;
-    justify-self: flex-start;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    @media screen and (max-width: 640px) {
-    padding: 0 0px;}
 
-`;
 const MobileIcons = styled.div`
     display: none;
     @media screen and (max-width: 768px) {
@@ -54,6 +42,18 @@ const MobileIcons = styled.div`
         cursor: pointer;
         color: ${({ theme }) => theme.text_primary};
     }
+`;
+const NavLogo = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.text_primary};
+  text-decoration: none;
+`;
+
+const LogoImage = styled.img`
+  width: 40px;  // Adjust the size as needed
+  height: auto;
+  margin-right: 10px;
 `;
 const NavItems = styled.ul`
    width: 100%;
@@ -138,11 +138,7 @@ const LinkedInButton = styled.a`
     font-size: 14px;
   }
 `;
-const Span = styled.div`
-    padding: 0 4px;
-    font-weight: bold;
-    font-size: 18px;
-`;
+
 const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
@@ -190,20 +186,10 @@ const Navbar = () => {
     return (
         <Nav>
             <NavContainer>
-                <NavLogo to="">
-                    <button
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            color: "white",
-                            background: "none",
-                            border: "none",
-                            marginBottom: '20',
-                            cursor: 'pointer',
-                        }}
-                    >
-                        <DiCssdeck size="3rem" /> <Span>Po</Span>
-                    </button>
+                <NavLogo to="/">
+                    
+                    <LogoImage src="https://cdn.iconscout.com/icon/premium/png-512-thumb/hacker-19-485442.png?f=webp&w=256" alt="Logo" />
+                    <span>Portfolio</span>
                 </NavLogo>
 
                 <MobileIcons>
