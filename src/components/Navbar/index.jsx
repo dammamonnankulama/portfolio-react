@@ -1,8 +1,9 @@
 import React from "react";
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
-import {Nav,NavContainer,MobileIcons,NavItems,NavLink,ButtonContainer,GithubButton,LinkedInButton,LogoText,MobileMenu,MobileMenuLink} from './NavbarStyles'
+import { Nav, NavContainer, MobileIcons, NavItems, NavLink, ButtonContainer, GithubButton, LinkedInButton, LogoText, MobileMenu, MobileMenuLink } from './NavbarStyles'
 import { useTheme } from 'styled-components';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
@@ -10,55 +11,121 @@ const Navbar = () => {
     return (
         <Nav>
             <NavContainer>
-                <LogoText>Damma <span>Deshan</span></LogoText>
-                <MobileIcons>
-                    <FaBars onClick={() => {
-                        setOpen(!open)
-                    }} />
+                <LogoText>
+                    Damma <span>Deshan</span>
+                </LogoText>
 
+                {/* Mobile menu toggle */}
+                <MobileIcons>
+                    <FaBars
+                        onClick={() => setOpen((prev) => !prev)}
+                        aria-label="Toggle navigation menu"
+                    />
                 </MobileIcons>
+
+                {/* Desktop Navbar */}
                 <NavItems>
-                    <NavLink href="#about">About</NavLink>
-                    <NavLink href='#skills'>Skills</NavLink>
-                    <NavLink href='#projects'>Projects</NavLink>
-                    <NavLink href='#education'>Education</NavLink>
+                    <NavLink as={ScrollLink} to="about" smooth={true} duration={500}>
+                        About
+                    </NavLink>
+                    <NavLink as={ScrollLink} to="skills" smooth={true} duration={500}>
+                        Skills
+                    </NavLink>
+                    <NavLink as={ScrollLink} to="projects" smooth={true} duration={500}>
+                        Projects
+                    </NavLink>
+                    <NavLink as={ScrollLink} to="education" smooth={true} duration={500}>
+                        Education
+                    </NavLink>
                 </NavItems>
-                <ButtonContainer>
-                    <GithubButton href={Bio.github} target="_blank" rel="noopener noreferrer">
+
+                {/* Desktop Buttons */}
+                <ButtonContainer className="desktop-buttons">
+                    <GithubButton
+                        href={Bio.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Github Profile
                     </GithubButton>
-                    
-                    <LinkedInButton href={Bio.linkedin} target="_blank" rel="noopener noreferrer">
+                    <LinkedInButton
+                        href={Bio.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         LinkedIn Profile
                     </LinkedInButton>
                 </ButtonContainer>
-
             </NavContainer>
-            {
-                open && (
-                    <MobileMenu open={open}>
-                        <MobileMenuLink href="#about" onClick={() => {
-                            setOpen(!open);
-                        }}>About</MobileMenuLink>
-                        <MobileMenuLink href='#skills' onClick={() => {
-                            setOpen(!open);
-                        }}>Skills</MobileMenuLink>
-                        <MobileMenuLink href='#experience' onClick={() => {
-                            setOpen(!open);
-                        }}>Projects</MobileMenuLink>
-                        <MobileMenuLink href='#education' onClick={() => {
-                            setOpen(!open);
-                        }}>Education</MobileMenuLink>
-                        <GithubButton
-                            style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }}
-                            href="/"
-                            target="_blank">
-                            Github Profile
-                        </GithubButton>
-                    </MobileMenu>
-                )
-            }
 
+            {/* Mobile Menu */}
+            {open && (
+                <MobileMenu open={open}>
+                    <MobileMenuLink
+                        as={ScrollLink}
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setOpen(false)}
+                    >
+                        About
+                    </MobileMenuLink>
+                    <MobileMenuLink
+                        as={ScrollLink}
+                        to="skills"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setOpen(false)}
+                    >
+                        Skills
+                    </MobileMenuLink>
+                    <MobileMenuLink
+                        as={ScrollLink}
+                        to="projects"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setOpen(false)}
+                    >
+                        Projects
+                    </MobileMenuLink>
+                    <MobileMenuLink
+                        as={ScrollLink}
+                        to="education"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setOpen(false)}
+                    >
+                        Education
+                    </MobileMenuLink>
+
+                    <GithubButton
+                        href={Bio.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            padding: "10px 16px",
+                            background: theme.primary,
+                            color: "white",
+                            width: "max-content",
+                        }}
+                    >
+                        Github Profile
+                    </GithubButton>
+                    <LinkedInButton
+                        href={Bio.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            padding: "10px 16px",
+                            background: theme.primary,
+                            color: "white",
+                            width: "max-content",
+                        }}
+                    >
+                        LinkedIn Profile
+                    </LinkedInButton>
+                </MobileMenu>
+            )}
         </Nav>
     );
 }
