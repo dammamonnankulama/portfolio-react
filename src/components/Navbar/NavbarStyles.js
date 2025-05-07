@@ -79,8 +79,9 @@ export const GithubButton = styled.a`
     border: 1.3px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
+  margin-right: 10px;
   align-items: center;
-  height: 70%;
+  height: 60%;
   border-radius: 30px;
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
@@ -104,7 +105,7 @@ export const LinkedInButton = styled.a`
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 70%;
+  height: 60%;
   border-radius: 30px;
   color: ${({ theme }) => theme.primary};
   cursor: pointer;

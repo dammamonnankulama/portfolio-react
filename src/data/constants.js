@@ -53,6 +53,11 @@ export const Bio = {
       title: "Backend",
       skills: [
         {
+          name: "Spring Boot",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBSMs0DhHv74ZaCwR4NAVEh6YBoHSNQRFMrdawRyfxuQGaD-4cUCb3Nwu9AVXl3BJjvmc&usqp=CAU",
+        },
+        {
           name: "Node Js",
           image: "https://nodejs.org/static/images/logo.svg",
         },
@@ -137,7 +142,24 @@ export const Bio = {
     },
   ];
   
- //export cont experience = []
+  export const experiences = [
+    {
+      id: 0,
+      img: "https://dteetoxzwiwrovoohdpd.supabase.co/storage/v1/object/public/cbc_images//intteq.png",
+      role: "Fullstack Engineering Intern",
+      company: "INTTEQ",
+      date: "Apr 2025 - Present",
+      desc: "Collaborated with the development team to build and maintain web applications using React.js for frontend and Spring Boot for backend services.",
+      skills: [
+        "React Js",
+        "Spring Boot",
+        "Java",
+        "MySQL",
+        "Git",
+      ],
+      
+    },
+  ];
 
   
   export const education = [
@@ -164,6 +186,25 @@ export const Bio = {
   export const projects = [
     {
       id: 0,
+      title: "Crystal Beauty Care",
+      date: "nov 2024 - Feb 2025",
+      description:
+        "A fully functional MERN stack e-commerce web application, Crystal Beauty Care, designed to sell a wide range of beauty products. The platform includes advanced features such as product browsing, user authentication, a shopping cart, secure checkout, and real-time order tracking..",
+      image:
+        "https://dteetoxzwiwrovoohdpd.supabase.co/storage/v1/object/public/cbc_images//homepage.png",
+      tags: [
+        "React Js",
+        "MongoDb",
+        "Node Js",
+        "Express Js",
+       
+      ],
+      category: "web app",
+      github: "https://github.com/dammamonnankulama/cbc-backend",
+      
+    },
+    {
+      id: 1,
       title: "Book Store",
       date: "Sep 2024 - Oct 2024",
       description:
@@ -181,25 +222,7 @@ export const Bio = {
       github: "https://github.com/dammamonnankulama/Book-store-MERN",
       
     },
-    {
-      id: 1,
-      title: "Crystal Beauty Care",
-      date: "nov 2024 - Present",
-      description:
-        "A fully functional MERN stack e-commerce web application, Crystal Beauty Care, designed to sell a wide range of beauty products. The platform includes advanced features such as product browsing, user authentication, a shopping cart, secure checkout, and real-time order tracking..",
-      image:
-        "https://cdn.dribbble.com/users/1981841/screenshots/6702986/shot-3_4x.jpg?resize=400x0",
-      tags: [
-        "React Js",
-        "MongoDb",
-        "Node Js",
-        "Express Js",
-       
-      ],
-      category: "web app",
-      github: "https://github.com/dammamonnankulama/cbc-backend",
-      
-    },
+    
 
     {
       id: 2,

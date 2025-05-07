@@ -37,6 +37,9 @@ const Navbar = () => {
                     <NavLink as={ScrollLink} to="education" smooth={true} duration={500}>
                         Education
                     </NavLink>
+                    <NavLink as={ScrollLink} to="experience" smooth={true} duration={500}>
+                        Experience
+                    </NavLink>
                 </NavItems>
 
                 {/* Desktop Buttons */}
@@ -48,6 +51,7 @@ const Navbar = () => {
                     >
                         Github Profile
                     </GithubButton>
+                    
                     <LinkedInButton
                         href={Bio.linkedin}
                         target="_blank"
@@ -96,6 +100,15 @@ const Navbar = () => {
                         onClick={() => setOpen(false)}
                     >
                         Education
+                    </MobileMenuLink>
+                    <MobileMenuLink
+                        as={ScrollLink}
+                        to="experience"
+                        smooth={true}
+                        duration={500}
+                        onClick={() => setOpen(false)}
+                    >
+                        Experience
                     </MobileMenuLink>
 
                     <GithubButton
