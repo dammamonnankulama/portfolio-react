@@ -51,6 +51,7 @@ const Navbar = () => {
                     >
                         Github Profile
                     </GithubButton>
+                    
                     <LinkedInButton
                         href={Bio.linkedin}
                         target="_blank"
